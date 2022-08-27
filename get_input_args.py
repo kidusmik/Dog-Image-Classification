@@ -4,7 +4,7 @@
 #                                                                             
 # PROGRAMMER: Kidus Worku
 # DATE CREATED: August 21, 2022                                   
-# REVISED DATE: 
+# REVISED DATE: August 27, 2022
 # PURPOSE: Create a function that retrieves the following 3 command line inputs 
 #          from the user using the Argparse Python module. If the user fails to 
 #          provide some or all of the 3 inputs, then the default values are
@@ -43,11 +43,11 @@ def get_input_args():
     
     # Create 3 command line arguments as mentioned above using add_argument() from ArguementParser method 
     parser.add_argument('--dir', type=str, default='pet_images/', 
-                        help='path to the directory containing pet images') 
+                        help='Path to the directory containing pet images') 
     parser.add_argument('--arch', type=str, default='vgg', 
-                        help='type of CNN architecture to use') 
+                        help='Type of CNN model architecture to use', choices=['vgg', 'alexnet', 'resnet']) 
     parser.add_argument('--dogfile', type=str, default='dognames.txt', 
-                        help='the file name containing dog names') 
+                        help='The file name which contains valid dog names') 
     
     
     # Replace None with parser.parse_args() parsed argument collection that 
