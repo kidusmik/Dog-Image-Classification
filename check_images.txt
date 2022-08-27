@@ -1,0 +1,44 @@
+Questions regarding Uploaded Image Classification:
+
+1. Did the three model architectures classify the breed of dog in Dog_01.jpg to be the same breed? If not, report the differences in the classifications.
+
+Answer: All the three model architectures classified the dog breed correctly.
+
+
+2. Did each of the three model architectures classify the breed of dog in Dog_01.jpg to be the same breed of dog as that model architecture classified Dog_02.jpg? If not, report the differences in the classifications.
+
+Answer: No, only ResNet model architecture has classfied correctly Dog_02.jpg as the same as Dog_01.jpg. 
+        - VGG model architecture classfied Dog_01.jpg as a 'golden retriever' while it classified Dog_02.jpg as a 'corgi' 
+        - AlexNet model architecture classfied Dog_01 as a 'golden retriever' while it classified Dog_02 as 'Pomeranian'
+
+
+3. Did the three model architectures correctly classify Animal_Name_01.jpg and Object_Name_01.jpg to not be dogs? If not, report the misclassifications.
+
+Answer: Yes, all three model architectures correctly classified Animal_Name_01.jpg and Object_Name_01.jpg as Not-Dogs
+
+
+4. Based upon your answers for questions 1. - 3. above, select the model architecture that you feel did the best at classifying the four uploaded images. Describe why you selected that model architecture as the best on uploaded image classification.
+
+Answer: I select ResNet model architecture as the best one for classifiying the four uploaded images, I feel ResNet outperformed the VGG and AlexNet due to these reasons: 
+    1. It classified all of the images correctly, including the 'Dog_02.jpg' image  which the others failed to classify.
+    2. ResNet model was faster than VGG, the total elapsed time for ResNet was approximately 1 second while VGG's was 3 seconds
+
+
+*** But for the default `petimages` directory classification I select VDD model architecture as the best one for classifiying the pet images, I feel VDD outperformed the rest and has higher percentage than the other two, the only drawback is the total time elapsed is very high compared to AlexNet and ResNet. The result is shown at the `tables` below.
+
+
+*** I have created a file called "print_batch_results.py" which is found inside this directory that prints comparison of the three CNN model architectures in "tabular" form which results looks like this:
+
+Results: Number of Images
+
+CNN Model # Total Images    # Dog Images      # Not-a-Dog Images
+ResNet   40                30                10               
+AlexNet  40                30                10               
+VGG      40                30                10               
+
+Results: Performance
+
+CNN Model % Not-a-Dog Correct % is-a-Dog Correct % Breeds Correct  % Match Labels    Time Elapsed     
+ResNet   90.00             100.00            90.00             82.50             0:0:5 
+AlexNet  100.00            100.00            80.00             75.00             0:0:2 
+VGG      100.00            100.00            93.33             87.50             0:0:33

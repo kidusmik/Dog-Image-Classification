@@ -1,0 +1,14 @@
+
+Results: Number of Images
+
+CNN Model # Total Images    # Dog Images      # Not-a-Dog Images
+ResNet   40                30                10               
+AlexNet  40                30                10               
+VGG      40                30                10               
+
+Results: Performance
+
+CNN Model % Not-a-Dog Correct % is-a-Dog Correct % Breeds Correct  % Match Labels    Time Elapsed     
+ResNet   90.00             100.00            90.00             82.50             0:0:5 
+AlexNet  100.00            100.00            80.00             75.00             0:0:2 
+VGG      100.00            100.00            93.33             87.50             0:0:33
