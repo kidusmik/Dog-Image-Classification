@@ -4,7 +4,7 @@
 #                                                                             
 # PROGRAMMER: Kidus Worku
 # DATE CREATED: August 21, 2022                                  
-# REVISED DATE: 
+# REVISED DATE: August 27, 2022
 # PURPOSE: Create the function get_pet_labels that creates the pet labels from 
 #          the image's filename. This function inputs: 
 #           - The Image Folder as image_dir within get_pet_labels function and 
@@ -43,7 +43,7 @@ def get_pet_labels(image_dir):
     # Replace None with the results_dic dictionary that you created with this
     # function 
     result_dic = {} 
-    filename_list = listdir(image_dir) 
+    filename_list = [filename for filename in listdir(image_dir) if not filename.startswith('.')]
     pet_label_list = []
     
     """ Here I didnt check if a key already exists or not because I'm 
